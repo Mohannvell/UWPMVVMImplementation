@@ -1,5 +1,5 @@
 # UWPMVVMImplementation
-A simple application that runs on MVVM architecture.
+A simple UWP application that runs on MVVM architecture.
 
 The Model View ViewModel (MVVM) is an architectural pattern used in software engineering that originated from Microsoft which is specialized in the Presentation Model design pattern.
 
