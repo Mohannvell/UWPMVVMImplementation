@@ -5,37 +5,48 @@ using System.Windows.Input;
 
 namespace SimpleMVVMImplementation.ViewModels {
     public class EmployeeDataViewModel:BaseViewModel {
-        private string _Name;
-        private string _Department;
-        private string _Email;
+        //private string _Name;
+        //private string _Department;
+        //private string _Email;
 
-        public string Name {
+        //public string Name {
+        //    get {
+        //        return _Name;
+        //    }
+        //    set {
+        //        _Name = value;
+        //        NotifyPropertyChanged("Name");
+        //    }
+        //}
+
+        //public string Department {
+        //    get {
+        //        return _Department;
+        //    }
+        //    set {
+        //        _Department = value;
+        //        NotifyPropertyChanged("Department");
+        //    }
+        //}
+
+        //public string Email {
+        //    get {
+        //        return _Email;
+        //    }
+        //    set {
+        //        _Email = value;
+        //        NotifyPropertyChanged("Email");
+        //    }
+        //}
+
+        private EmployeeData _newInput = new EmployeeData();
+        public EmployeeData NewInput {
             get {
-                return _Name;
+                return _newInput;
             }
             set {
-                _Name = value;
-                NotifyPropertyChanged("Name");
-            }
-        }
-
-        public string Department {
-            get {
-                return _Department;
-            }
-            set {
-                _Department = value;
-                NotifyPropertyChanged("Department");
-            }
-        }
-
-        public string Email {
-            get {
-                return _Email;
-            }
-            set {
-                _Email = value;
-                NotifyPropertyChanged("Email");
+                _newInput = value;
+                NotifyPropertyChanged("NewInput");
             }
         }
 
@@ -58,18 +69,21 @@ namespace SimpleMVVMImplementation.ViewModels {
 
             //Adds a new item to the collection
             AddToMaster = new RelayCommand(() => {
-                string _Name = this.Name;
-                string _Department = this.Department;
-                string _Email = this.Email;
+                //string _Name = this.Name;
+                //string _Department = this.Department;
+                //string _Email = this.Email;
 
-                _EmployeeList.Add(new EmployeeData {
-                    Name = _Name,
-                    Department = _Department,
-                    Email = _Email
-                });
-                this.Name = "";
-                this.Department = "";
-                this.Email = "";
+                //_EmployeeList.Add(new EmployeeData {
+                //    Name = _Name,
+                //    Department = _Department,
+                //    Email = _Email
+                //});
+                //this.Name = "";
+                //this.Department = "";
+                //this.Email = "";
+
+                _EmployeeList.Add(NewInput);
+                NewInput = new EmployeeData();
             });
 
             //Removes selected item from collection

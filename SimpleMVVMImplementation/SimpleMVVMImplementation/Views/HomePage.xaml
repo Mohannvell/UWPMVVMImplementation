@@ -20,7 +20,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Width="300" VerticalAlignment="Center">
-            <StackPanel>
+            <StackPanel DataContext="{Binding NewInput,Mode=TwoWay}">
                 <TextBox Header="Enter Name" Text="{Binding Name,Mode=TwoWay}"/>
                 <TextBox Header="Enter Department" Text="{Binding Department,Mode=TwoWay}"/>
                 <TextBox Header="Enter Email" Text="{Binding Email,Mode=TwoWay}"/>
